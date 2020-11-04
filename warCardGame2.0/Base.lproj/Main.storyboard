@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="warCardGame2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="WAR-6i-k1R" userLabel="background">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="8a1-fb-RSe">
+                                <rect key="frame" x="146" y="54" width="122" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="V4Z-CW-lMa"/>
+                                    <constraint firstAttribute="height" constant="55" id="rPi-66-4FK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="V4Z-CW-lMa"/>
+                                        <exclude reference="rPi-66-4FK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="V4Z-CW-lMa"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="rPi-66-4FK"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="EKA-nj-oJe" userLabel="cards and button stackview">
+                                <rect key="frame" x="72" y="367.66666666666669" width="270" height="221.00000000000006"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rNC-by-bkH" userLabel="cards stackview">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card8" translatesAutoresizingMaskIntoConstraints="NO" id="iFg-6g-LUS">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card11" translatesAutoresizingMaskIntoConstraints="NO" id="TLn-ar-mte">
+                                                <rect key="frame" x="150" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6w-AR-6Hg" userLabel="deal button">
+                                        <rect key="frame" x="94.333333333333343" y="189.99999999999994" width="81.666666666666657" height="31"/>
+                                        <state key="normal" backgroundImage="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6K9-Tl-4U5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="20"/>
+                                <variation key="heightClass=regular-widthClass=compact" spacing="20"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-o1-VfC" userLabel="Player score stackview">
+                                <rect key="frame" x="20" y="773.66666666666663" width="47" height="68.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfA-vb-5cL">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tH-KC-g5j">
+                                        <rect key="frame" x="0.0" y="20.333333333333371" width="24.666666666666668" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="uid-1D-8p9" userLabel="CPU stackview">
+                                <rect key="frame" x="359.66666666666669" y="773.66666666666663" width="34.333333333333314" height="68.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xB-dY-dpn">
+                                        <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0j-nM-sTP">
+                                        <rect key="frame" x="9.6666666666666305" y="20.333333333333371" width="24.666666666666671" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WAR-6i-k1R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Hw-Qq-Q0E"/>
+                            <constraint firstItem="WAR-6i-k1R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="38g-jp-mKk"/>
+                            <constraint firstAttribute="trailing" secondItem="WAR-6i-k1R" secondAttribute="trailing" id="4Ju-xb-wxX"/>
+                            <constraint firstItem="WAR-6i-k1R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Aq-uK-ENo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uid-1D-8p9" secondAttribute="trailing" constant="20" id="7Ks-Ra-9Gz"/>
+                            <constraint firstItem="EKA-nj-oJe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8rc-LU-tUT"/>
+                            <constraint firstItem="WAR-6i-k1R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Agj-ik-XJ5"/>
+                            <constraint firstItem="WAR-6i-k1R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="D0c-JI-X0G"/>
+                            <constraint firstItem="8a1-fb-RSe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DC6-72-xmu"/>
+                            <constraint firstAttribute="bottom" secondItem="WAR-6i-k1R" secondAttribute="bottom" id="Dza-ac-BYG"/>
+                            <constraint firstAttribute="bottom" secondItem="WAR-6i-k1R" secondAttribute="bottom" id="Mg9-I8-zcX"/>
+                            <constraint firstAttribute="trailing" secondItem="WAR-6i-k1R" secondAttribute="trailing" id="PXV-qP-xE1"/>
+                            <constraint firstAttribute="trailing" secondItem="WAR-6i-k1R" secondAttribute="trailing" id="QCy-XF-qh8"/>
+                            <constraint firstAttribute="trailing" secondItem="WAR-6i-k1R" secondAttribute="trailing" id="die-Jj-04X"/>
+                            <constraint firstAttribute="trailing" secondItem="WAR-6i-k1R" secondAttribute="trailing" id="eAd-VG-z1x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nfp-o1-VfC" secondAttribute="bottom" constant="20" id="eMc-2o-SMx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uid-1D-8p9" secondAttribute="bottom" constant="20" id="eQw-ay-GWH"/>
+                            <constraint firstItem="WAR-6i-k1R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fRq-og-tcx"/>
+                            <constraint firstItem="8a1-fb-RSe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fyx-Kp-lYp"/>
+                            <constraint firstItem="WAR-6i-k1R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hKa-g5-1lm"/>
+                            <constraint firstItem="WAR-6i-k1R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hnc-NO-HXM"/>
+                            <constraint firstItem="EKA-nj-oJe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="lnm-5g-ZbP">
+                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="WAR-6i-k1R" secondAttribute="bottom" id="oUo-Wb-PUQ"/>
+                            <constraint firstItem="nfp-o1-VfC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pVZ-22-Irv"/>
+                            <constraint firstItem="WAR-6i-k1R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vG8-Ny-tzl"/>
+                            <constraint firstAttribute="bottom" secondItem="WAR-6i-k1R" secondAttribute="bottom" id="xsn-Jt-C5E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="leftImageView" destination="iFg-6g-LUS" id="CHt-Ah-6rc"/>
+                        <outlet property="leftScoreLabel" destination="6tH-KC-g5j" id="Vpy-6Y-TEe"/>
+                        <outlet property="rightImageView" destination="TLn-ar-mte" id="SkQ-kt-z98"/>
+                        <outlet property="rightScoreLabel" destination="x0j-nM-sTP" id="hqQ-Rg-4AN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="267" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="card11" width="120" height="170"/>
+        <image name="card8" width="120" height="170"/>
+        <image name="dealbutton" width="81.666664123535156" height="31"/>
+        <image name="logo" width="122" height="67"/>
+    </resources>
+</document>
